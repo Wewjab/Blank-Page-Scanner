@@ -1,0 +1,8 @@
+Example Url List
+
+domain.com
+http://domain.com
+https://domain.com
+domain.com/folder
+domain.com/page1.html
+domain.com/folder/page1.html
