@@ -70,7 +70,7 @@ def main(url):
         text = '\033[32;1m#\033[0m ' + url
         if is_page_blank(url):
             text += ' => \033[32;1mBlank/Vuln\033[0m'
-            with open('blank_pages.txt', 'a') as file:
+            with open('blank_pages_deepScan.txt', 'a') as file:
                 file.write(url + '\n')
         else:
             text += ' => \033[31;1mNormal\033[0m'
@@ -92,7 +92,7 @@ ____    __    ____  _______ ____    __    ____
    \    /\    /    |  |____    \    /\    /    
     \__/  \__/     |_______|    \__/  \__/     
                                                
-    Just Blank Page Scanner - Recode Kece Finder \n""")
+    Just Blank Page Scanner - DEEPSCAN! %90 Accurate \n""")
     try:
         filename = input("Enter the filename containing URLs (list.txt): ")
         num_threads = int(input("Enter the number of threads (1-999): "))
