@@ -2,8 +2,9 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import WebDriverException, NoSuchElementException, TimeoutException
 from threading import Thread
-from Queue import Queue
+from queue import Queue
 from colorama import init
+import requests
 
 init(autoreset=True)
 
@@ -49,10 +50,8 @@ def is_page_blank(url):
 
         driver.get(url)
 
-        # Menambahkan timeout untuk menunggu hingga halaman terbuka
-        driver.implicitly_wait(15)  # Tunggu hingga 15 detik
+        driver.implicitly_wait(15)
 
-        # Cek apakah body halaman kosong
         body = driver.find_element_by_tag_name('body')
         if not body.text.strip():
             return True
@@ -67,11 +66,11 @@ def main(url):
     try:
         text = '\033[32;1m#\033[0m ' + url
         if is_page_blank(url):
-            text += ' => \033[32;1mBlank/Vuln\033[0m'
-            with open('blank_pages2.txt', 'a') as file:
+            text += ' => \033[32;1mBlank\033[0m'
+            with open('blank_pages_standardScan.txt', 'a') as file:
                 file.write(url + '\n')
         else:
-            text += ' => \033[31;1mNot Blank\033[0m'
+            text += ' => \033[31;1mNormal\033[0m'
     except:
         text = '\033[31;1m#\033[0m ' + url
         text += ' => \033[31;1mError\033[0m'
@@ -86,10 +85,10 @@ ____    __    ____  _______ ____    __    ____
    \    /\    /    |  |____    \    /\    /    
     \__/  \__/     |_______|    \__/  \__/     
                                                
-    Just Blank Page Scanner Using Selenium - Recode Kece Finder \n""")
+    Just Blank Page Scanner Using Selenium - STANDARDSCAN! %70 Accurate! \n""")
     try:
-        filename = raw_input("Enter the filename containing URLs: ")
-        num_threads = int(raw_input("Enter the number of threads: "))
+        filename = input("Enter the filename containing URLs (list.txt): ")
+        num_threads = int(input("Enter the number of threads (1-999): "))
     except KeyboardInterrupt:
         print("Scan aborted by user.")
         exit()
