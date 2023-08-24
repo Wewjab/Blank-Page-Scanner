@@ -13,7 +13,7 @@
 5.pip install -r requirements.txt
 6.Just Run : 
 	Deep		: python3 deepScan.py
-	Standard	: pyrhon3 standardScan.py
+	Standard	: python3 standardScan.py
 [++++++++++++++++++++++++++++++++++++++++]
 
 [++++++++++ Android / Termux ++++++++++]
@@ -25,7 +25,7 @@
 6.pip install -r requirements.txt
 7.Just Run : 
 	Deep		: python3 deepScan.py
-	Standard	: pyrhon3 standardScan.py
+	Standard	: python3 standardScan.py
 [++++++++++++++++++++++++++++++++++++++++]
 
 [++++++++++ iPhone(IOS) / iSH(Alpine Linux) ++++++++++]
@@ -36,7 +36,7 @@
 5.apk add python3-pip
 6.Just Run : 
 	Deep		: python3 deepScan.py
-	Standard	: pyrhon3 standardScan.py
+	Standard	: python3 standardScan.py
 [++++++++++++++++++++++++++++++++++++++++]
 
 </pre>
