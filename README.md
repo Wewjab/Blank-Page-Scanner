@@ -41,4 +41,11 @@
 
 </pre>
 
+# Note :
+
+Deep Scan : Accurate 90%, Redirect domain detect and Expired Domain detect as Blank Page.
+Standard Scan (Selenium) : Accurate 70%, 404 Notfound Or Cpanel Error detect as Blank Page.
+
+#### This program is for educational purposes only or useful uses, if you use it for crime, I am not responsible for it. ####
+	
 # Thank you
